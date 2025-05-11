@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_catalogs",
+  "info": {
+    "singularName": "product-catalog",
+    "pluralName": "product-catalogs",
+    "displayName": "ProductCatalog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

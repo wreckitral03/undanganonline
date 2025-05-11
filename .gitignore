@@ -1,27 +1,51 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# debug
+# ---------------------
+# Node dependencies
+# ---------------------
+node_modules/
+.pnpm-debug.log*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# env files
-.env*
+# ---------------------
+# Strapi-specific
+# ---------------------
+/.build/              # Old build folder (rare, pre-v4)
+/dist/               # Admin panel build output
+/.cache/
+/.tmp/               # SQLite DB, temporary build, admin data
 
-# vercel
-.vercel
+# Ignore SQLite DBs if used
+*.db
+*.sqlite
 
-# typescript
+# ---------------------
+# Env and config
+# ---------------------
+.env
+.env.*               # e.g. .env.development, .env.production
+.env.local
+
+# ---------------------
+# TypeScript
+# ---------------------
 *.tsbuildinfo
 next-env.d.ts
+
+# ---------------------v
+# Frameworks
+# ---------------------
+.next/                # Next.js build
+out/                  # Next.js export
+
+# ---------------------
+# Deployment
+# ---------------------
+.vercel
+build/                # General build folder
+
+# ---------------------
+# OS-specific
+# ---------------------
+.DS_Store
+Thumbs.db

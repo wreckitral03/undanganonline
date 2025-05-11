@@ -1,0 +1,14 @@
+
+services:
+  strapi:
+    image: node:22
+    container_name: strapi
+    working_dir: /srv/app
+    volumes:
+      - ./undanganonline/strapi:/srv/app
+    ports:
+      - '1337:1337'
+    command: bash -c "npm install && npm run develop"
+    environment:
+      NODE_ENV: development
+    restart: unless-stopped
